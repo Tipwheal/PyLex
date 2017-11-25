@@ -1,7 +1,7 @@
 import NFA
 
 store = [1]
-preserve = ['\\t', '\\n', '\w', 'A-Z', 'a-z', '0-9', "\+", "\."]
+preserve = ['\\t', '\\n', '\w', 'A-Z', 'a-z', '0-9', "\+", "\.", "\*", "\L", "\R", "\O", "\/", "\-"]
 suf_list = ["*", "?", "+"]
 convert = {
     "a-z": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z",
@@ -172,8 +172,11 @@ def remove_outer_o(line):
     return line
 
 
+#
 def is_base_path(line):
     if "(" in line or ")" in line:
+        if line in preserve:
+            return True
         return False
     if line in preserve:
         return True

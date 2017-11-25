@@ -15,25 +15,20 @@ number  {digit}+(\.{digit}+)?(E(\+|-)?{digit}+)?
 
 
 {ws}        {}
-test*est    {TEST}
-aa|bb|cc    {DOUBLE}
-while       {WHILE}
-if          {IF}
-not         {NOT}
-or          {OR}
-and         {AND}
-else        {ELSE}
-+           {ADD}
+%%token     {TK_START}
+%%syntax    {SN_START}
+,           {DOT}
+:           {TO}
+;           {END}
+'\+'        {SYN_ADD}
+'\-'        {SYN_SUB}
+'\/'        {SYN_DIV}
+'\*'        {SYN_MUL}
+'\L'        {SYN_L}
+'\R'        {SYN_R}
+\O          {SYN_OR}
 =           {SETV}
-\+=          {A_SET}
-<=          {RELOP, LE}
-<           {RELOP, LT}
-==          {RELOP, EQ}
-!=          {RELOP, NE}
->           {RELOP, GT}
->=          {RELOP, GE}
 {id}        {ID}
-{number}    {NUM}
 
 %% func
 

@@ -18,7 +18,9 @@ def get_info():
     result += "not_end_list = " + str(DFAO.not_end_list) + "\n"
     result += "end_and_action = " + str(DFAO.end_and_action) + "\n"
     result += "path_map = " + str(DFAO.path_map) + "\n"
-    result += "change_map = {\" \": \"\\\\w\", \"\\n\": \"\\\\n\", \".\": \"\\\\.\", \"+\": \"\\\\+\"}\n"
+    result += "change_map = {\" \": \"\\\\w\", \"\\n\": \"\\\\n\", \".\": \"\\\\.\", \"+\": \"\\\\+\", " \
+              "\"*\": \"\\\\*\", \"(\": \"\\\\L\", \")\": \"\\\\R\", \"|\": \"\\\\O\", \"/\": \"\\\\/\"," \
+              "\"-\": \"\\\\-\"}\n"
     result += "store_str = []\n"
     result += "ptr = [0]\n"
     result += "\n\n"
